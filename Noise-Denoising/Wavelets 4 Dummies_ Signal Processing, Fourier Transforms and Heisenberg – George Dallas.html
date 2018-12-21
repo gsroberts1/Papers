@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<!-- saved from url=(0118)https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/ -->
+<html lang="en" class="gr__georgemdallas_wordpress_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><iframe sandbox="allow-scripts allow-same-origin" id="1672a9714ac0345" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/showad.html">
+    </iframe>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://georgemdallas.wordpress.com/xmlrpc.php">
+
+<title>Wavelets 4 Dummies: Signal Processing, Fourier Transforms and Heisenberg – George Dallas</title>
+<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.pubmine.com/">
+<link rel="dns-prefetch" href="https://x.bidswitch.net/">
+<link rel="dns-prefetch" href="https://static.criteo.net/">
+<link rel="dns-prefetch" href="https://ib.adnxs.com/">
+<link rel="dns-prefetch" href="https://aax.amazon-adsystem.com/">
+<link rel="dns-prefetch" href="https://bidder.criteo.com/">
+<link rel="dns-prefetch" href="https://cas.criteo.com/">
+<link rel="dns-prefetch" href="https://gum.criteo.com/">
+<link rel="dns-prefetch" href="https://ads.pubmatic.com/">
+<link rel="dns-prefetch" href="https://gads.pubmatic.com/">
+<link rel="dns-prefetch" href="https://tpc.googlesyndication.com/">
+<link rel="dns-prefetch" href="https://ad.doubleclick.net/">
+<link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/">
+<link rel="dns-prefetch" href="https://www.googletagservices.com/">
+<link rel="dns-prefetch" href="https://cdn.switchadhub.com/">
+<link rel="dns-prefetch" href="https://delivery.g.switchadhub.com/">
+<link rel="dns-prefetch" href="https://delivery.swid.switchadhub.com/">
+<link rel="alternate" type="application/rss+xml" title="George Dallas » Feed" href="https://georgemdallas.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="George Dallas » Comments Feed" href="https://georgemdallas.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="George Dallas » Wavelets 4 Dummies: Signal Processing, Fourier Transforms and Heisenberg Comments Feed" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/feed/">
+	<script src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/client.js.download" async="" type="text/javascript"></script><script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1532082729h&ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="all-css-0-1" href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(1)" type="text/css" media="all">
+<link rel="stylesheet" id="wordads-sorbet-css" href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/sorbet-v2.css" type="text/css" media="all">
+<link rel="stylesheet" id="all-css-2-1" href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(2)" type="text/css" media="all">
+<link rel="stylesheet" id="sorbet-fonts-css" href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="all-css-4-1" href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(3)" type="text/css" media="all">
+<link rel="stylesheet" id="print-css-5-1" href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/global-print.css" type="text/css" media="print">
+<link rel="stylesheet" id="all-css-6-1" href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(4)" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(5)"></script>
+<link rel="stylesheet" id="all-css-0-2" href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/style(1).css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://georgemdallas.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="What are Fractals and why should I care?" href="https://georgemdallas.wordpress.com/2014/05/02/what-are-fractals-and-why-should-i-care/">
+<link rel="next" title="Making sense of Internet Platforms: Network Effects and Two Sided Markets" href="https://georgemdallas.wordpress.com/2014/06/05/making-sense-of-internet-platforms-network-effects-and-two-sided-markets/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/">
+<link rel="shortlink" href="https://wp.me/p3BKqL-7e">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fgeorgemdallas.wordpress.com%2F2014%2F05%2F14%2Fwavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fgeorgemdallas.wordpress.com%2F2014%2F05%2F14%2Fwavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wavelets 4 Dummies: Signal Processing, Fourier Transforms and Heisenberg">
+<meta property="og:url" content="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/">
+<meta property="og:description" content="NOTE: I am currently doing freelance consulting work for machine learning solutions. For all enquires please contact me at george(dot)m(dot)dallas@gmail(dot)com (replace (dot) with a . –  this is t…">
+<meta property="article:published_time" content="2014-05-14T22:39:30+00:00">
+<meta property="article:modified_time" content="2017-11-29T21:38:51+00:00">
+<meta property="og:site_name" content="George Dallas">
+<meta property="og:image" content="https://georgemdallas.files.wordpress.com/2014/05/wvface.jpg">
+<meta property="og:image:width" content="332">
+<meta property="og:image:height" content="146">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:text:title" content="Wavelets 4 Dummies: Signal Processing, Fourier Transforms and Heisenberg">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="https://s2.wp.com/i/webclip.png">
+<link rel="openid.server" href="https://georgemdallas.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="https://georgemdallas.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://georgemdallas.wordpress.com/osd.xml" title="George Dallas">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<meta name="theme-color" content="#f0f1f3">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+				<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="George Dallas"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="UK based Information Engineer/Internet Social Scientist"><meta name="msapplication-task" content="name=Subscribe;action-uri=https://georgemdallas.wordpress.com/feed/;icon-uri=https://s1.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico"><meta name="description" content="NOTE: I am currently doing freelance consulting work for machine learning solutions. For all enquires please contact me at george(dot)m(dot)dallas@gmail(dot)com (replace (dot) with a . –  this is to prevent spam bots) Wavelets have recently migrated from Maths to Engineering, with Information Engineers starting to explore the potential of this field in signal processing, data…">
+		<script type="text/javascript">
+		function __ATA_CC() {var v = document.cookie.match('(^|;) ?personalized-ads-consent=([^;]*)(;|$)');return v ? 1 : 0;}
+		var __ATA_PP = { pt: 1, ht: 0, tn: 'sorbet', amp: false, siteid: 8982, consent: __ATA_CC() };
+		var __ATA = __ATA || {};
+		__ATA.cmd = __ATA.cmd || [];
+		__ATA.criteo = __ATA.criteo || {};
+		__ATA.criteo.cmd = __ATA.criteo.cmd || [];
+		</script>
+		<script type="text/javascript" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/head.js.download" async=""></script><link rel="amphtml" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/ga.js.download"></script>
+<style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/hovercard.min.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/services.min.css"><script src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(6)" type="text/javascript" async=""></script><script src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(7)" type="text/javascript" async=""></script><script src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/outstream.js.download" async=""></script><style type="text/css">
+.iowo-adv {
+   overflow: hidden;
+}
+.iowo-adv__header {
+   font-family: "Helvetica", Arial, sans-serif !important;
+   font-size: 11.5px !important;
+   text-align: center;
+   position: relative;
+   padding: 5px 0px;
+   letter-spacing: 0.3px !important;
+   font-weight: 300 !important;
+   text-transform: uppercase;
+   color: #aaa;
+}
+.iowo-adv__close-icon {
+   width: 24px;
+   height: 24px;
+   position: absolute;
+   right: 10px;
+   top: 34px;
+   z-index:10;
+   cursor: pointer;
+   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4gMQDS4lyDpzXgAAAKlJREFUWMPVV1sOgCAMo9yZU3Bo/THGRKaylTXuF9YW9mCgtbaVw3rvKAl25azWQgb5TcBqESNsWAvscFgceNuwkvy8gZUi3jAx68AkHwpgifiKgShA1BcsIK8PmKfxCKZdqTdkYCRVJF/CmT2ymYoBo7Yj5UprMN6GVYvY/hUCaRJKy1DaiKStWPoYSZ9j6UAiHcmkQ6l0LJd+TDLIn0TULHILu2aRWxw7NqDQ4pqt7KcAAAAASUVORK5CYII=");
+   background-size: contain;
+}
+.iowo-adv__close-icon_touch {
+   left: 10px;
+}
+.iowo-adv__sound-icon {
+   width: 32px;
+   cursor: pointer;
+   height: 32px;
+   position: absolute;
+   bottom:12px;
+   right:5px;
+   z-index:10;
+}
+.iowo-adv__sound-icon_on {
+   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QYcDigM2jawiwAAAbhJREFUWMPtl7FLHFEQxr+ZtwTytLDwmjSnhf+AYrpUBwGvS7F2YqFNQNjieCnsTlPscdxdZ2MVCORIEewMwf/AlEkRCRaSKqQMCrnbGZtVLPRye2/dJcSpdos33292vjfvLfAQ/3tQHkkajcYqM68YY3bjOD7NsjbwFXfOhSLyDgAPBgMBsJFlPXuK10TkLTNf5ZnKmoM9PvuSqh4w8yOfInjCyhcAHBLRtG8LeQLxJyLyiZkreRg4E0AURTOq+pGZ5/LahsEodwN4A+Dxfc6BUdsw9BF3zkWqOq2q+51O5+ckLWDP4p4R0Wtm/uqcW7wvkXFiVkT6YRiaQgGGw+Gaqn4AAGZeqFarTwsF6PV6F0R0eH3oEFUKBXDO1QBsX70bY74U7YGXAObT5/5dp2QRJuyLyGbmOaCq50Re14XYGPPqb/eDOwGCINhJkkRvHrGqOkNEtXHU2+32Z69JGMfxdwDrt5hrL+1vLpHZA9baLQDvSwNoNptirV0DcFQKQArxx1r7AsBxKQApxO8kSeoi8q0UAADodru/giB4LiI/0pl/UigAALRarTMiWhaRurV25+FX65+LSxNniSadskJNAAAAAElFTkSuQmCC");
+}
+.iowo-adv__sound-icon_off {
+   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAdBJREFUWIXt1b9r1GAcx/HP840u94jo6mD/Aae24I9NHZSCi5NDO5TO7fLkCTgdt15y4C6IdHFwEpxscRHc1dHB0UFBOvToks/Xxch53j3JExNB6XcMz+X1Ti5PApzO/zLD4fBMm99JF7hzbm86nZ6kafp02Rrv/apz7mrnAd77LRF5BCBR1fvLcJKHIvIqy7JrnQV47zdIPgFgAEBEfjvfDH4RwHmSW50EZFl2g+RzEfn535P8FsABYN9au/vHAc65K2VZvhSRwQz+JUmSjRA+GAy2R6MRZ89lWuArAN6KyKU5/PZ4PP4QgwNAcOs4524ZYy7/UmzMQwBLcefcGsmDJjgQuAPe+5sAXocCF+EAGuNA4BlQ1ZW+8WDA38BbBXSJRwfU4SSnMThQswvqcBE5BHChWiMiGoMDDe9AE7zt1Ab0idcG9I0HA0i+6xsHGn4LvPfrAA4a4Md5np+LCah9BuZxVX1G8mMM0jpgwZXvW2s3AdwB8LnXgEV49ZKZTCafVPUuyaNeAkJ4taYoivcico/kSacBTfBq8jx/Y4x5AKD8caicXxMdoKpnSSZ1eDVFUbwwxuwA+Kqqj2MDFm7DNE2vA9i01u7GvttP55+b71U6NuXe6u9vAAAAAElFTkSuQmCC");
+}
+.iowo-adv__timer {
+   position: absolute;
+   bottom:5px;
+   left:5px;
+   min-width: 60px;
+   padding: 3px;
+   color: #aaaaaa;
+   border-radius: 5px;
+   font-family: sans-serif;
+   text-align: center;
+   background-color:black;
+   z-index:10;
+}
+.iowo-timeline {
+   position: absolute;
+   bottom:0;
+   left:0;
+   width: 100%;
+   height: 5px;
+   background-color: rgba(0, 0, 0, 0.2);
+   z-index:10;
+}
+.iowo-timeline__runner {
+   position: relative;
+   height: 5px;
+   background-color: red;
+   -moz-transition: .5s;
+   -ms-transition: .5s;
+   -o-transition: .5s;
+   -webkit-transition: .5s;
+   transition: .5s;
+   transition-property: max-width;
+}</style><script src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/ima3.js.download"></script><link rel="preload" href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/f(1).txt" as="script"><script type="text/javascript" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/f(1).txt"></script></head>
+
+<body class="post-template-default single single-post postid-448 single-format-standard mp6 customizer-styles-applied right-sidebar highlander-enabled highlander-light" data-gr-c-s-loaded="true">
+<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+				<div class="site-header-wrapper">
+			<div class="site-branding">
+				<h1 class="site-title"><a href="https://georgemdallas.wordpress.com/" rel="home">George Dallas</a></h1>
+				<h2 class="site-description">UK based Information Engineer/Internet Social Scientist</h2>
+			</div>
+
+			<div class="toggles">
+				<div id="menu-toggle" class="toggle" title="Menu"><span class="screen-reader-text">Menu</span></div>
+												<div id="search-toggle" class="toggle" title="Search"><span class="screen-reader-text">Search</span></div>
+			</div>
+		</div>
+	</header><!-- #masthead -->
+	<div id="menu-toggle-nav" class="panel">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<a class="skip-link screen-reader-text" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#content">Skip to content</a>
+
+			<div class="menu"><ul>
+<li><a href="https://georgemdallas.wordpress.com/">Home</a></li><li class="page_item page-item-1"><a href="https://georgemdallas.wordpress.com/about/">About</a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+	</div>
+			<div id="search-toggle-nav" class="panel">
+		<div class="search-wrapper">
+			<form role="search" method="get" class="search-form" action="https://georgemdallas.wordpress.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+	</label>
+	<input type="submit" class="search-submit" value="Search">
+</form>
+		</div>
+	</div>
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-448" class="post-448 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+				<h1 class="entry-title">Wavelets 4 Dummies: Signal Processing, Fourier Transforms and&nbsp;Heisenberg</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><strong>NOTE: I am currently doing freelance consulting work for machine learning solutions. For all enquires please contact me at george(dot)m(dot)dallas@gmail(dot)com (replace (dot) with a . – &nbsp;this is to prevent spam bots)</strong></p>
+<p>Wavelets have recently migrated from Maths to Engineering, with Information Engineers starting to explore the potential of this field in signal processing, data compression and noise reduction. What’s interesting about wavelets is that they are starting to undermine a staple mathematical technique in Engineering: the Fourier Transform. In doing this they are opening up a new way to make sense of signals, which is the bread and butter of Information Engineering.<span id="more-448"></span></p>
+<p>At their most basic, wavelets are quite literally ‘mini waves’. Rather than being a wave that goes on forever, like sin() or cos(), wavelets are a short ‘burst’ of waves that quickly die away, like the picture below:<a href="https://georgemdallas.files.wordpress.com/2014/05/wavelets2.jpg"><img data-attachment-id="449" data-permalink="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/wavelets2/" data-orig-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets2.jpg?w=646&amp;h=411" data-orig-size="1187,756" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="wavelets2" data-image-description="" data-medium-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets2.jpg?w=646&amp;h=411?w=300" data-large-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets2.jpg?w=646&amp;h=411?w=646" class="alignnone size-full wp-image-449" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wavelets2.jpg" alt="wavelets2" width="646" height="411" srcset="https://georgemdallas.files.wordpress.com/2014/05/wavelets2.jpg?w=646&amp;h=411 646w, https://georgemdallas.files.wordpress.com/2014/05/wavelets2.jpg?w=150&amp;h=96 150w, https://georgemdallas.files.wordpress.com/2014/05/wavelets2.jpg?w=300&amp;h=191 300w, https://georgemdallas.files.wordpress.com/2014/05/wavelets2.jpg?w=768&amp;h=489 768w, https://georgemdallas.files.wordpress.com/2014/05/wavelets2.jpg?w=1024&amp;h=652 1024w, https://georgemdallas.files.wordpress.com/2014/05/wavelets2.jpg 1187w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>Because there are very few rules about what defines a wavelet, there are hundreds of different types. However they all take the form of a ‘mini wave’, fading to zero quickly.</p>
+<p>These little waves are shaking things up because now Wavelet Transforms are available to Engineers as well as the Fourier Transform. What are these transforms then and why are they so important? How are Wavelet Transforms different/better than Fourier Transforms? That’s the subject of this blog post. First it describes how and why Engineers de/reconstruct a signal using the Fourier transform. It then goes on to talk about the limitations of the Fourier Transform and Heisenberg’s uncertainty principle. It ends by describing how wavelets can be used for transforms and why they are sometimes preferred because they give better resolution.</p>
+<p>This blog post does not have much maths in it, but it does deal with concepts that might be slightly beyond someone with no mathematical background. As it is a very broad overview of the subject there are some big simplifications, but hopefully you’ll get something from it.</p>
+<h2>Time, Frequency and Fourier</h2>
+<p>In Engineering, a signal is usually something you want to send or record. For instance it could be a clip of a voice recording, like the graph below (altered from <a href="http://cmusphinx.sourceforge.net/wiki/tutorialconcepts">this website</a>)<br>
+<a href="https://georgemdallas.files.wordpress.com/2014/05/wavelets3.jpg"><img data-attachment-id="453" data-permalink="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/wavelets3/" data-orig-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets3.jpg?w=646&amp;h=185" data-orig-size="703,202" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="wavelets3" data-image-description="" data-medium-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets3.jpg?w=646&amp;h=185?w=300" data-large-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets3.jpg?w=646&amp;h=185?w=646" class="alignnone size-full wp-image-453" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wavelets3.jpg" alt="wavelets3" width="646" height="185" srcset="https://georgemdallas.files.wordpress.com/2014/05/wavelets3.jpg?w=644&amp;h=185 644w, https://georgemdallas.files.wordpress.com/2014/05/wavelets3.jpg?w=150&amp;h=43 150w, https://georgemdallas.files.wordpress.com/2014/05/wavelets3.jpg?w=300&amp;h=86 300w, https://georgemdallas.files.wordpress.com/2014/05/wavelets3.jpg 703w" sizes="(max-width: 646px) 100vw, 646px"></a><br>
+It could also be an image, a video, a word file, a graph or a multitude of other things. Basically think of a signal as a squiggly line on a graph, like above.</p>
+<p>The picture of the voice is a signal in the <strong>time domain</strong>. This means that along the x-axis of this graph (left to right) is time, while on the y-axis (up and down) is the amplitude of the voice – how loud it is. While plotting a signal in the time domain is often a nice way to visualise it, Engineers find it useful to deal with a signal in the <strong>frequency domain.</strong> In the frequency domain, the frequency of the signal is on the x-axis, while the amplitude (or loudness) of the signal is still on the y-axis. Below, the bottom graph is a signal similar to the voice signal in the time domain. The line on the top graph is the same signal represented in the frequency domain. It’s a summary of the signal’s frequency over that time period. (altered from <a href="http://www.mathworks.com/matlabcentral/fileexchange/22214-voice-audio-processing">this website</a>)</p>
+<p><a href="https://georgemdallas.files.wordpress.com/2014/05/wavelets6.jpg"><img data-attachment-id="455" data-permalink="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/wavelets4/" data-orig-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets4.jpg" data-orig-size="858,422" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="wavelets4" data-image-description="" data-medium-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets4.jpg?w=300" data-large-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets4.jpg?w=646" class="alignnone size-full wp-image-455" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wavelets6.jpg" alt="wavelets6" width="646" height="317"></a></p>
+<p>On the frequency graph, the three spikes would represent the low, medium and high tones of the voice. It’s important to remember that the top graph only represents frequency and not time; it is merely another way of looking at the signal.</p>
+<p>The process of getting from the time domain to the frequency domain, and from the frequency domain back to the time domain, is called the Fourier Transform. In the 1820’s Joseph Fourier had the remarkable insight that any signal can be represented by an equation that just adds up a combination of sin() and cos(). For instance the formula for a square wave (a binary signal, 1,0,1,0,1,0) is:</p>
+<p><img class="mwe-math-fallback-png-inline tex" style="color:#252525;" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/10a19cc7cfb730f1407f920248b60fee.png" alt="f(x) = \frac{4h}{\pi} \left ( \sin (x) + \frac{1}{3} \sin (3x) + \frac{1}{5} \sin (5x) + \frac{1}{7} \sin (7x) + ... \right )\ \ (1)"></p>
+<p>The adding of sin() waves&nbsp;carries on until infinity (ignore the 4h/pi bit). It is worth noting that each sin() term is a different&nbsp;frequency.&nbsp;For instance sin(x) and sin(3x) look like this in the time domain:</p>
+<p><a href="https://georgemdallas.files.wordpress.com/2014/05/sinx.jpg"><img data-attachment-id="461" data-permalink="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/sinx/" data-orig-file="https://georgemdallas.files.wordpress.com/2014/05/sinx.jpg?w=646" data-orig-size="528,329" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;George&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1399944852&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="sinx" data-image-description="" data-medium-file="https://georgemdallas.files.wordpress.com/2014/05/sinx.jpg?w=646?w=300" data-large-file="https://georgemdallas.files.wordpress.com/2014/05/sinx.jpg?w=646?w=528" class="alignnone size-full wp-image-461" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/sinx.jpg" alt="sinx" srcset="https://georgemdallas.files.wordpress.com/2014/05/sinx.jpg 528w, https://georgemdallas.files.wordpress.com/2014/05/sinx.jpg?w=150 150w, https://georgemdallas.files.wordpress.com/2014/05/sinx.jpg?w=300 300w" sizes="(max-width: 528px) 100vw, 528px"></a></p>
+<p>And in the frequency domain are spikes:</p>
+<p><a href="https://georgemdallas.files.wordpress.com/2014/05/wavelets5.jpg"><img data-attachment-id="462" data-permalink="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/wavelets5/" data-orig-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets5.jpg?w=646&amp;h=317" data-orig-size="858,422" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="wavelets5" data-image-description="" data-medium-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets5.jpg?w=646&amp;h=317?w=300" data-large-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets5.jpg?w=646&amp;h=317?w=646" class="alignnone size-full wp-image-462" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wavelets5.jpg" alt="wavelets5" width="646" height="317" srcset="https://georgemdallas.files.wordpress.com/2014/05/wavelets5.jpg?w=646&amp;h=317 646w, https://georgemdallas.files.wordpress.com/2014/05/wavelets5.jpg?w=150&amp;h=74 150w, https://georgemdallas.files.wordpress.com/2014/05/wavelets5.jpg?w=300&amp;h=148 300w, https://georgemdallas.files.wordpress.com/2014/05/wavelets5.jpg?w=768&amp;h=378 768w, https://georgemdallas.files.wordpress.com/2014/05/wavelets5.jpg 858w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>They are spikes because each sin() term is oscillating at different speeds, meaning they are different frequencies. Every sin() wave has a frequency. They’re equivalent. In the frequency domain 2 different frequencies represent 2 points on the x-axis, so they are spikes of a certain height.</p>
+<p>The function above shows how a very awkward shape like a square or triangle can be represented by adding a load of different frequencies together.&nbsp;Below is a graph of sin(x), the first frequency of the square wave, sin(x) + 1/3 sin(3x), the first two frequencies, and the first 10 frequencies:</p>
+<p><a href="https://georgemdallas.files.wordpress.com/2014/05/sq2.jpg"><img data-attachment-id="464" data-permalink="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/sq2/" data-orig-file="https://georgemdallas.files.wordpress.com/2014/05/sq2.jpg?w=646" data-orig-size="512,402" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;George&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1399947365&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="sq2" data-image-description="" data-medium-file="https://georgemdallas.files.wordpress.com/2014/05/sq2.jpg?w=646?w=300" data-large-file="https://georgemdallas.files.wordpress.com/2014/05/sq2.jpg?w=646?w=512" class="alignnone size-full wp-image-464" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/sq2.jpg" alt="sq2" srcset="https://georgemdallas.files.wordpress.com/2014/05/sq2.jpg 512w, https://georgemdallas.files.wordpress.com/2014/05/sq2.jpg?w=150 150w, https://georgemdallas.files.wordpress.com/2014/05/sq2.jpg?w=300 300w" sizes="(max-width: 512px) 100vw, 512px"></a></p>
+<p>You can see how it starts to look more like a square wave the more sin() terms, or frequencies, you add. The point is that any signal can be decomposed into an equation with just sin() and cos() waves being added together, resulting in a frequency graph.</p>
+<p>Once you do a Fourier Transform on a signal you can reduce noise, compress data, modulate, filter, encode and more. All these processes require the signal to be manipulated in the frequency domain, so a Fourier Transform is done before any work begins. This is why it is the bread and butter of Information Engineering; it is one of the first ways you analyse and think about a signal. Once the signal has been dealt with, you can Fourier Transform the signal from the frequency domain back to the time domain. The signal will then look different to the original, but hopefully different in the way you want <img draggable="false" class="emoji" alt="🙂" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/1f642.svg"></p>
+<p>Great. So we’ve seen how the frequency domain is a useful way to look at signals and that a Fourier Transform is the way to get there. Most of us have an idea of what frequency is (listening to different pitches of singing), and it a common sense way to think about signals. So is that all? Not quite. While the Fourier Transform is useful in countless ways (especially since the Fast Fourier Transform – a quick way for a computer to do it), there is a drawback. This drawback has to do with resolution and is best explained using an unexpected source: Heisenberg (not the meth dealer).</p>
+<h2>The Uncertainty Principle</h2>
+<p>It so happens that a limitation of the Fourier Transform has to do with Heisenberg’s Uncertainty Principle (which, as an Engineer, I am pretty uncertain about). In Physics the principle goes along the lines of: you can know where a particle is or how fast it is going, but not both. The process is a trade-off. If you want to become more certain about the position of the ball, you have to become less certain of the speed of the ball and vice versa.</p>
+<p>The graph below is a representation of the uncertainty principle. The position of the ball is on the x-axis and the sped of the ball is on the y-axis. The red dot shows the actual speed and position on the graph, however you can see that it is surrounded by boxes. The boxes represent the uncertainty you have about each value:</p>
+<p><a href="https://georgemdallas.files.wordpress.com/2014/05/wavelets7.jpg"><img data-attachment-id="472" data-permalink="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/wavelets7/" data-orig-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets7.jpg?w=646&amp;h=323" data-orig-size="1063,532" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="wavelets7" data-image-description="" data-medium-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets7.jpg?w=646&amp;h=323?w=300" data-large-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets7.jpg?w=646&amp;h=323?w=646" class="alignnone size-full wp-image-472" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wavelets7.jpg" alt="wavelets7" width="646" height="323" srcset="https://georgemdallas.files.wordpress.com/2014/05/wavelets7.jpg?w=646&amp;h=323 646w, https://georgemdallas.files.wordpress.com/2014/05/wavelets7.jpg?w=150&amp;h=75 150w, https://georgemdallas.files.wordpress.com/2014/05/wavelets7.jpg?w=300&amp;h=150 300w, https://georgemdallas.files.wordpress.com/2014/05/wavelets7.jpg?w=768&amp;h=384 768w, https://georgemdallas.files.wordpress.com/2014/05/wavelets7.jpg?w=1024&amp;h=512 1024w, https://georgemdallas.files.wordpress.com/2014/05/wavelets7.jpg 1063w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>&nbsp;</p>
+<p>Each box has the same area. As the area represents how uncertain you are about speed/position, it follows that there is always a minimum amount of uncertainty in the measurement of both values. For instance the blue box is tall and thin. The fact that it is thin around the position of the ball indicates that this measurement is pretty certain of the position. However to keep the box the same area, it has to stretch out along the y-axis, indicating that it is unsure of the value for the speed.</p>
+<p>This amount of uncertainty is&nbsp;also called&nbsp;<strong>resolution&nbsp;</strong>of the measurement.</p>
+<p>The Fourier Transform has the same problem of resolution.&nbsp;You can either be sure of the frequency or the time of a signal, but not both. The graph below is the same as above, but with the frequency and time domain replacing the speed and position of the ball, as it convenient to think of it in the same way:</p>
+<p><a href="https://georgemdallas.files.wordpress.com/2014/05/wavelets9.jpg"><img data-attachment-id="476" data-permalink="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/wavelets9/" data-orig-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets9.jpg?w=646&amp;h=323" data-orig-size="1063,532" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="wavelets9" data-image-description="" data-medium-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets9.jpg?w=646&amp;h=323?w=300" data-large-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets9.jpg?w=646&amp;h=323?w=646" class="alignnone size-full wp-image-476" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wavelets9.jpg" alt="wavelets9" width="646" height="323" srcset="https://georgemdallas.files.wordpress.com/2014/05/wavelets9.jpg?w=646&amp;h=323 646w, https://georgemdallas.files.wordpress.com/2014/05/wavelets9.jpg?w=150&amp;h=75 150w, https://georgemdallas.files.wordpress.com/2014/05/wavelets9.jpg?w=300&amp;h=150 300w, https://georgemdallas.files.wordpress.com/2014/05/wavelets9.jpg?w=768&amp;h=384 768w, https://georgemdallas.files.wordpress.com/2014/05/wavelets9.jpg?w=1024&amp;h=512 1024w, https://georgemdallas.files.wordpress.com/2014/05/wavelets9.jpg 1063w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>&nbsp;</p>
+<p>The problem is that you when you are studying a real signal it would be useful to know what the ‘instantaneous frequency’ of the signal is. The instantaneous frequency is the exact frequency of a signal at an exact moment in time. For instance if I was listening to a music track I would like to be able to say ‘at 1 min 59.0423 seconds into the music track the sound is 1563.2 Hz’. Unfortunately the Fourier Transform cannot do this because there exists a minimum amount of uncertainty between the frequency and time domains, like Heisenberg has a minimum amount of uncertainty between the speed and position of a particle (the area of the box). You can know the moment in time you want to find the frequency for (like the blue box), but because there is a minimum uncertainty, the box of has to stretch out across frequency, meaning that you are unsure of the frequency at that moment in time.</p>
+<p>The best you can do with a Fourier Transform is to sample a range of time (for instance, the time signal between 1 min 58 sec and 1 min 59 sec in a song) and find a range of frequencies that were played over that amount of time, as represented by the black box. An example of this can be seen&nbsp;by looking at the third picture in the post again. There is a signal over a range of time (e.g. someone saying ‘hello’) and the frequency graph is the range of frequencies recorded over that time.</p>
+<p>Instantaneous frequency may seem like a pedantic problem in signal processing and often it is; as I’ve already said the Fourier Transform is great in a lot of situations. However it still persists. Engineers have tried to deal with this using altered Fourier Transforms, but they still have the same problem. For instance the picture to the left below shows the time signal of sin(x^2). This is a signal that has a frequency getting steadily faster. The middle picture is what the exact frequency of the signal is over time. The right picture is what a ‘Windowed Fourier Transform’ thinks the frequency is over&nbsp;time. You can see by the thick dark shaded line that it is uncertain what the frequency is at any moment in time, even though the original signal does have an exact frequency at each moment:</p>
+<p><a href="https://georgemdallas.files.wordpress.com/2014/05/wavelets10.jpg"><img data-attachment-id="477" data-permalink="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/wavelets10/" data-orig-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets10.jpg?w=646&amp;h=202" data-orig-size="1582,496" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;George&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1400097660&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="wavelets10" data-image-description="" data-medium-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets10.jpg?w=646&amp;h=202?w=300" data-large-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets10.jpg?w=646&amp;h=202?w=646" class="alignnone size-full wp-image-477" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wavelets10.jpg" alt="wavelets10" width="646" height="202" srcset="https://georgemdallas.files.wordpress.com/2014/05/wavelets10.jpg?w=644&amp;h=202 644w, https://georgemdallas.files.wordpress.com/2014/05/wavelets10.jpg?w=1289&amp;h=404 1289w, https://georgemdallas.files.wordpress.com/2014/05/wavelets10.jpg?w=150&amp;h=47 150w, https://georgemdallas.files.wordpress.com/2014/05/wavelets10.jpg?w=300&amp;h=94 300w, https://georgemdallas.files.wordpress.com/2014/05/wavelets10.jpg?w=768&amp;h=241 768w, https://georgemdallas.files.wordpress.com/2014/05/wavelets10.jpg?w=1024&amp;h=321 1024w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>Now we’ve seen how the Fourier Transform suffers from the uncertainty principle, or to put it another way we’ve seen how the Fourier Transform has a lack of resolution between the frequency and time domain. This is where wavelets come in. Decomposing a signal into wavelets rather than frequencies can give much better resolution in the domain it is transformed into. However when a Wavelet Transform is used the signal is transformed into the wavelet domain, rather than the frequency domain.</p>
+<h2>The Wavelet Transform and wavelet domain</h2>
+<p>The way in which the Fourier Transform gets from time to frequency&nbsp;is by&nbsp;decomposing the time signal into a formula consisting of lots of sin() and cos() terms added together. From there a frequency graph can be constructed.</p>
+<p>One of the first things said in this post was that a wavelet is a ‘mini wave’ while sin() and cos() are infinite (they never go to zero and stay there, they carry on forever). During the Fourier Transform the signal is therefore being deconstructed into waves that are infinitely long. You can think of this in terms of the green box in the uncertainty graph above. If you have a high resolution in the frequency domain (i.e. focusing on one frequency, like sin(3x) ) it is hard to isolate it in time, as each frequency exists across all time. Being uncertain of the time when focusing on the frequency is the flip-side of being uncertain of the frequency when focusing on time.</p>
+<p>To overcome this resolution problem a Wavelet Transform is used to deconstruct the signal into a load of wavelets being added together. Wavelets are useful because they are <strong>limited in time and frequency.</strong>&nbsp;&nbsp;Instead of a wavelet lasting forever and having no limit in time, it dies quickly, like the example of different wavelets below shows:</p>
+<p><a href="https://georgemdallas.files.wordpress.com/2014/05/wavelets11.jpg"><img data-attachment-id="479" data-permalink="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/wavelets11/" data-orig-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets11.jpg?w=646" data-orig-size="455,250" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;George&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1400099764&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="wavelets11" data-image-description="" data-medium-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets11.jpg?w=646?w=300" data-large-file="https://georgemdallas.files.wordpress.com/2014/05/wavelets11.jpg?w=646?w=455" class="alignnone size-full wp-image-479" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wavelets11.jpg" alt="wavelets11" srcset="https://georgemdallas.files.wordpress.com/2014/05/wavelets11.jpg 455w, https://georgemdallas.files.wordpress.com/2014/05/wavelets11.jpg?w=150 150w, https://georgemdallas.files.wordpress.com/2014/05/wavelets11.jpg?w=300 300w" sizes="(max-width: 455px) 100vw, 455px"></a></p>
+<p>These waves are limited in time, whereas sin() and cos() are not because they continue forever. When a signal is deconstructed into wavelets rather than sin() and cos() it is called a Wavelet Transform. The graph that can be analysed after the transform is in the wavelet domain, rather than the frequency domain.</p>
+<p>This time limiting quality about wavelets is useful to Engineers as it provides more resolution in the time domain. Instead of modelling with an infinite wave, it is possible to model with a finite wave which you can ‘slide’ along to time domain. The ability to slide the signal is the what gives Engineers a more accurate representation of the signal and therefore a better resolution in time.</p>
+<p>How do wavelets handle low and high frequencies? For high frequencies a sin() wave gets squished together and for low frequencies the wave gets stretched out. The same goes for wavelets. This is handled by something called the&nbsp;<strong>scale&nbsp;</strong>of the wavelet. The picture below shows the same wavelet at different scales:<a href="https://georgemdallas.files.wordpress.com/2014/05/scale.gif"><img data-attachment-id="480" data-permalink="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/scale/" data-orig-file="https://georgemdallas.files.wordpress.com/2014/05/scale.gif?w=646" data-orig-size="404,304" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="scale" data-image-description="" data-medium-file="https://georgemdallas.files.wordpress.com/2014/05/scale.gif?w=646?w=300" data-large-file="https://georgemdallas.files.wordpress.com/2014/05/scale.gif?w=646?w=404" class="alignnone size-full wp-image-480" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/scale.gif" alt="scale"></a></p>
+<p>This is the wavelet equivalent of a low, medium and high frequency.</p>
+<p>So when you use a Wavelet Transform the signal is deconstructed using the same wavelet at different scales, rather than the same sin() wave at different frequencies. As there are hundreds of different wavelets, there are hundreds of different transforms that are possible and therefore hundreds of different domains. However each domain has ‘scale’ on the x-axis rather than ‘frequency’, and provides better resolution in the time domain by being limited.</p>
+<p>Engineers have started compressing data, processing images and reducing noise using wavelets rather than frequencies with some success. In many situations the Fourier Transform is what is known and preferred, but in certain situations a Wavelet Transform can outperform it. For instance in images that are have ‘arbitrary’ noise, filtering the noise using wavelets rather than frequencies is often preferred. The image below has been ‘denoised’ using wavelets:<br>
+<a href="https://georgemdallas.files.wordpress.com/2014/05/wvface.jpg"><img data-attachment-id="483" data-permalink="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/wvface/" data-orig-file="https://georgemdallas.files.wordpress.com/2014/05/wvface.jpg?w=646" data-orig-size="332,146" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="wvface" data-image-description="" data-medium-file="https://georgemdallas.files.wordpress.com/2014/05/wvface.jpg?w=646?w=300" data-large-file="https://georgemdallas.files.wordpress.com/2014/05/wvface.jpg?w=646?w=332" class="alignnone size-full wp-image-483" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wvface.jpg" alt="wvface" srcset="https://georgemdallas.files.wordpress.com/2014/05/wvface.jpg 332w, https://georgemdallas.files.wordpress.com/2014/05/wvface.jpg?w=150 150w, https://georgemdallas.files.wordpress.com/2014/05/wvface.jpg?w=300 300w" sizes="(max-width: 332px) 100vw, 332px"></a></p>
+<p>Not too bad right?</p>
+<p>I like wavelets because they have opened up my mind on how I think about analysing signals and what a transform really is. Studying the frequency of a signal makes sense as it is an intuitive concept, however a the Fourier Transform is just one of many transforms. The others have no obligation to copy a natural concept like ‘frequency’ and can represent a signal in a variety of ways. Some of these representations are useful to Engineers and some are not. But wavelets serve to show that a signal can be viewed and represented however you want. Information can be moulded, but it’s what you make of the information that counts. Representing the data in different domains is often easy, but being able to have the insight to execute a task in one domain over another is part of the art of Information Engineering.</p>
+<p>This blog was an introduction to Wavelet Transforms, using Fourier Transforms and Heisenberg’s Uncertainty Principle as a way to highlight what the transforms are and why they’re useful. I hope you have enjoyed it!</p>
+<div id="atatags-370373-5bb3de78b9c50">
+        <script type="text/javascript">
+            __ATA.cmd.push(function() {
+                __ATA.initVideoSlot('atatags-370373-5bb3de78b9c50', {
+                    sectionId: '370373',
+                    format: 'inread'
+                });
+            });
+        </script>
+    </div><div class="iowo-adv" style="max-height: 400px;"><div class="iowo-adv__header" style="width: 646px;"><span>Advertisement</span><div class="iowo-adv__close-icon"></div></div><div style="position: relative; width: 646px; height: 363px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 85px inset;"><div style="position: absolute;"><div style="display: none;"><video title="Advertisement" webkit-playsinline="true" playsinline="true" style="background-color: rgb(0, 0, 0); position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;"></video><div style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;"></div></div><div style="display: none;"><video title="Advertisement" webkit-playsinline="true" playsinline="true" style="background-color: rgb(0, 0, 0); position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;"></video><div style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;"></div></div><iframe src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/bridge3.240.0_en.html" allowfullscreen="" allow="autoplay" style="border: 0px; opacity: 0; margin: 0px; padding: 0px; position: relative;"></iframe></div><div class="iowo-adv__sound-icon iowo-adv__sound-icon_off"></div><div class="iowo-timeline"><div class="iowo-timeline__runner" style="max-width: 0%;"></div></div></div></div>		<div class="wpcnt">
+			<div class="wpa wpmrec">
+				<span class="wpa-about">Advertisements</span>
+				<div class="u">		<div style="padding-bottom:15px;width:300px;height:250px;float:left;margin-right:5px;margin-top:0px">
+		<div id="atatags-26942-5bb3de78b9c7b" style="width: auto; height: auto;"><div style="width: 300px; height: 250px;"><iframe frameborder="0" scrolling="no" width="300" height="250" style="border:none;overflow:hidden;width:300px;height:250px;" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(12).html"></iframe></div><div id="atatags-26942-5bb3de78b9c7b__controls" style="width:300px;height:10px;text-align:right;line-height:6px;"><span id="atatags-26942-5bb3de78b9c7b__complain-btn" style="font-size: 10px; color: rgb(109, 171, 210); text-decoration: underline; cursor: pointer; display: inline;">Report this ad</span></div></div></div>		<div style="padding-bottom:15px;width:300px;height:250px;float:left;margin-top:0px">
+		<div id="atatags-114160-5bb3de78b9c7d" style="width: auto; height: auto;"><div style="width: 300px; height: 250px;"><iframe frameborder="0" scrolling="no" width="300" height="250" style="border:none;overflow:hidden;width:300px;height:250px;" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(13).html"></iframe></div><div id="atatags-114160-5bb3de78b9c7d__controls" style="width:300px;height:10px;text-align:right;line-height:6px;"><span id="atatags-114160-5bb3de78b9c7d__complain-btn" style="font-size: 10px; color: rgb(109, 171, 210); text-decoration: underline; cursor: pointer; display: inline;">Report this ad</span></div></div></div></div>
+				
+			</div>
+		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-448" class="share-twitter sd-button share-icon" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?share=twitter&amp;nb=1" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-448" class="share-facebook sd-button share-icon" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?share=facebook&amp;nb=1" target="_blank" title="Click to share on Facebook"><span>Facebook<span class="share-count">59</span></span></a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-53325627-448-5bb3de78bd163" data-src="//widgets.wp.com/likes/index.html?ver=20180319#blog_id=53325627&amp;post_id=448&amp;origin=georgemdallas.wordpress.com&amp;obj_id=53325627-448-5bb3de78bd163" data-name="like-post-frame-53325627-448-5bb3de78bd163"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-53325627-448-5bb3de78bd163" height="55px" width="100%" frameborder="0" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/index(1).html"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal"><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="396" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://georgemdallas.wordpress.com/2014/05/02/what-are-fractals-and-why-should-i-care/" title="What are Fractals and why should I care?
+
+NOTE: I am currently doing freelance consulting work for machine learning solutions. For all enquires please contact me at george(dot)m(dot)dallas@gmail(dot)com (replace (dot) with a . –  this is to prevent spam bots) Fractal geometry is a field of maths born in the 1970&#39;s and mainly developed by Benoit Mandelbrot. If you&#39;ve…" rel="nofollow" data-origin="448" data-position="0">What are Fractals and why should I care?</a></span><span class="jp-relatedposts-post-context">With 46 comments</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="263" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/" title="Principal Component Analysis 4 Dummies: Eigenvectors, Eigenvalues and Dimension Reduction
+
+NOTE: I am currently doing freelance consulting work for machine learning solutions. For all enquires please contact me at george(dot)m(dot)dallas@gmail(dot)com (replace (dot) with a . -  this is to prevent spam bots) Having been in the social sciences for a couple of weeks it seems like a large amount of…" rel="nofollow" data-origin="448" data-position="1">Principal Component Analysis 4 Dummies: Eigenvectors, Eigenvalues and Dimension Reduction</a></span><span class="jp-relatedposts-post-context">With 331 comments</span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="586" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://georgemdallas.wordpress.com/2015/03/24/the-story-of-computer-vision/" title="The Story of Computer Vision
+
+NOTE: I am currently doing freelance consulting work for machine learning solutions. For all enquires please contact me at george(dot)m(dot)dallas@gmail(dot)com (replace (dot) with a . –  this is to prevent spam bots) What is computer vision? Where has it come from? 20 years ago only a few esoteric Engineers were…" rel="nofollow" data-origin="448" data-position="2">The Story of Computer Vision</a></span><span class="jp-relatedposts-post-context">With 5 comments</span></p></div></div></div>			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		<span class="post-date"><a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/" title="10:39 pm" rel="bookmark"><time class="entry-date" datetime="2014-05-14T22:39:30+00:00">May 14, 2014</time></a></span><span class="byline"><span class="author vcard"><a class="url fn n" href="https://georgemdallas.wordpress.com/author/checkdetector/" title="View all posts by checkdetector" rel="author">checkdetector</a></span></span>					</footer><!-- .entry-meta -->
+</article><!-- #post-## -->
+
+				<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="https://georgemdallas.wordpress.com/2014/05/02/what-are-fractals-and-why-should-i-care/" rel="prev"><span class="meta-nav screen-reader-text">←</span></a></div><div class="nav-next"><a href="https://georgemdallas.wordpress.com/2014/06/05/making-sense-of-internet-platforms-network-effects-and-two-sided-markets/" rel="next"><span class="meta-nav screen-reader-text">→</span></a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+			
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			37 thoughts on “<span>Wavelets 4 Dummies: Signal Processing, Fourier Transforms and&nbsp;Heisenberg</span>”		</h2>
+
+		
+		<ol class="comment-list">
+			
+	<li id="comment-296" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-296" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/photo.jpg" class="avatar avatar-80" height="80" width="80"></span>					<cite class="fn"><a href="https://plus.google.com/109625531070344061166" rel="external nofollow" class="url">Ryan Dunwoody</a></cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Awesome post! Really helped with my Advanced Transforms course</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=296#respond" onclick="return addComment.moveForm( &quot;div-comment-296&quot;, &quot;296&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Ryan Dunwoody">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-296">
+					<time datetime="2014-05-15T15:58:49+00:00">
+						<span class="post-date">May 15, 2014 at 3:58 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-298" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-298" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/e5ee7ab1b1c2c194f6f7d4bf1a4c4770" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-e5ee7ab1b1c2c194f6f7d4bf1a4c4770-0"></span>					<cite class="fn">Andrea</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>great explication! simple and clear! thank you!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=298#respond" onclick="return addComment.moveForm( &quot;div-comment-298&quot;, &quot;298&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Andrea">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-298">
+					<time datetime="2014-05-18T16:06:10+00:00">
+						<span class="post-date">May 18, 2014 at 4:06 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-416" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-416" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/cd12213a7646970c04a104ab6a5298ef" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-cd12213a7646970c04a104ab6a5298ef-0"></span>					<cite class="fn">Gonzalo</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Amazing,I studied Telecomunications engineer and this is the best explanation of wavelets i’ve ever read.<br>
+Thank you</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=416#respond" onclick="return addComment.moveForm( &quot;div-comment-416&quot;, &quot;416&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Gonzalo">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-416">
+					<time datetime="2014-07-18T05:48:45+00:00">
+						<span class="post-date">July 18, 2014 at 5:48 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-435" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-435" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/06e038d2c5ece45750287266cfb4abf2.jpeg" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-06e038d2c5ece45750287266cfb4abf2-0"></span>					<cite class="fn"><a href="http://gravatar.com/imzadle" rel="external nofollow" class="url">imzadle</a></cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thank you so much. I have probably read a dozen explanations on wavelet transform and this is the best.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=435#respond" onclick="return addComment.moveForm( &quot;div-comment-435&quot;, &quot;435&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to imzadle">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-435">
+					<time datetime="2014-08-07T02:35:07+00:00">
+						<span class="post-date">August 7, 2014 at 2:35 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-462" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-462" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/ed33cfc725b9b007cc59ce50d2ced331" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-ed33cfc725b9b007cc59ce50d2ced331-0"></span>					<cite class="fn">Lucia</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>I have begun to understand wavelet theory thanks to your explanation. Thank you so much friend.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=462#respond" onclick="return addComment.moveForm( &quot;div-comment-462&quot;, &quot;462&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Lucia">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-462">
+					<time datetime="2014-08-30T20:26:42+00:00">
+						<span class="post-date">August 30, 2014 at 8:26 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-522" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-522" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/1d222a5ec6ae56bf33571a6a27a406a7" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-1d222a5ec6ae56bf33571a6a27a406a7-0"></span>					<cite class="fn">hx</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>I like your post! thank you</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=522#respond" onclick="return addComment.moveForm( &quot;div-comment-522&quot;, &quot;522&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to hx">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-522">
+					<time datetime="2014-09-24T14:08:03+00:00">
+						<span class="post-date">September 24, 2014 at 2:08 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-546" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-546" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/d18ddefd8101e126179c0f046c6d6d47" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-d18ddefd8101e126179c0f046c6d6d47-0"></span>					<cite class="fn">Ahmed Serag</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Great lesson Thanks alot</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=546#respond" onclick="return addComment.moveForm( &quot;div-comment-546&quot;, &quot;546&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Ahmed Serag">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-546">
+					<time datetime="2014-10-10T23:49:28+00:00">
+						<span class="post-date">October 10, 2014 at 11:49 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-592" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-592" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/a8bfb7af66c156955221fce047189996" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-a8bfb7af66c156955221fce047189996-0"></span>					<cite class="fn">theJonty</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>It’s a good starter for “wavelets”!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=592#respond" onclick="return addComment.moveForm( &quot;div-comment-592&quot;, &quot;592&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to theJonty">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-592">
+					<time datetime="2014-11-13T16:09:12+00:00">
+						<span class="post-date">November 13, 2014 at 4:09 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-653" class="comment byuser comment-author-davidg2p even thread-even depth-1 highlander-comment">
+		<article id="div-comment-653" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/066035c1f484f52bb545ef8eb70e397e.jpeg" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-066035c1f484f52bb545ef8eb70e397e-0"></span>					<cite class="fn">davidg2p</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Fantastic, the best explanation of wavelets ever. This single page is worth more than two metres of books!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=653#respond" onclick="return addComment.moveForm( &quot;div-comment-653&quot;, &quot;653&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to davidg2p">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-653">
+					<time datetime="2015-01-15T10:47:02+00:00">
+						<span class="post-date">January 15, 2015 at 10:47 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-698" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-698" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/7b296068c8191062cb0d9153bec949f2" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-7b296068c8191062cb0d9153bec949f2-0"></span>					<cite class="fn">Zoe</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Excellent!! Thanks a lot  for sharing!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=698#respond" onclick="return addComment.moveForm( &quot;div-comment-698&quot;, &quot;698&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Zoe">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-698">
+					<time datetime="2015-02-17T23:05:35+00:00">
+						<span class="post-date">February 17, 2015 at 11:05 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-717" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-717" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/fca6efa639d047312efde86074214c0a" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-fca6efa639d047312efde86074214c0a-0"></span>					<cite class="fn">Alan</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thank you very much for your amazing introduction. <img draggable="false" class="emoji" alt="🙂" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/1f642.svg"></p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=717#respond" onclick="return addComment.moveForm( &quot;div-comment-717&quot;, &quot;717&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Alan">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-717">
+					<time datetime="2015-03-11T19:46:20+00:00">
+						<span class="post-date">March 11, 2015 at 7:46 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-730" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-730" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/12d1475721c3b8e0720a8232557de706" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-12d1475721c3b8e0720a8232557de706-0"></span>					<cite class="fn">steve L</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Very good attempt, I can send detailed comments you may want to add to it</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=730#respond" onclick="return addComment.moveForm( &quot;div-comment-730&quot;, &quot;730&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to steve L">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-730">
+					<time datetime="2015-03-28T14:30:11+00:00">
+						<span class="post-date">March 28, 2015 at 2:30 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-763" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-763" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/2320da4a0ac6b0739be7d9f1bc73f562" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-2320da4a0ac6b0739be7d9f1bc73f562-0"></span>					<cite class="fn">Jirde</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thank you very much  for detailed explanation, please can you proceed to curvelets and other transforms….</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=763#respond" onclick="return addComment.moveForm( &quot;div-comment-763&quot;, &quot;763&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Jirde">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-763">
+					<time datetime="2015-05-21T02:17:26+00:00">
+						<span class="post-date">May 21, 2015 at 2:17 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-767" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-767" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/logo_normal.gif" class="avatar avatar-80" height="80" width="80"></span>					<cite class="fn"><a href="http://twitter.com/JoaCHIP" rel="external nofollow" class="url">Joachim Michaelis (@JoaCHIP)</a></cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>I’ve searched both the time and frequency domain of the internets to find a proper explanation of this stuff – one that didn’t assume that I’m a math expert. This was it! Thank you so much for a good down-to-earth explanation.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=767#respond" onclick="return addComment.moveForm( &quot;div-comment-767&quot;, &quot;767&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Joachim Michaelis (@JoaCHIP)">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-767">
+					<time datetime="2015-05-26T19:14:44+00:00">
+						<span class="post-date">May 26, 2015 at 7:14 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-786" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-786" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/5a6bc0239e17b9c9357e59b79e21029e" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-5a6bc0239e17b9c9357e59b79e21029e-0"></span>					<cite class="fn">sisu</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>good work. thanks for the post.<br>
+i would like to share that i also find this post useful:<br>
+   <a href="http://users.rowan.edu/~polikar/WAVELETS/WTtutorial.html" rel="nofollow">http://users.rowan.edu/~polikar/WAVELETS/WTtutorial.html</a><br>
+for understanding the basics about wavelets.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=786#respond" onclick="return addComment.moveForm( &quot;div-comment-786&quot;, &quot;786&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to sisu">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-786">
+					<time datetime="2015-06-17T08:38:32+00:00">
+						<span class="post-date">June 17, 2015 at 8:38 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-827" class="comment byuser comment-author-freezegelman odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-827" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/a83cc93c05da5bb280f858238fe7c72d.jpeg" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-a83cc93c05da5bb280f858238fe7c72d-0"></span>					<cite class="fn"><a href="http://parkertichko.wordpress.com/" rel="external nofollow" class="url">Parker</a></cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thank you!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=827#respond" onclick="return addComment.moveForm( &quot;div-comment-827&quot;, &quot;827&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Parker">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-827">
+					<time datetime="2015-08-16T13:12:26+00:00">
+						<span class="post-date">August 16, 2015 at 1:12 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-866" class="pingback even thread-even depth-1 highlander-comment">
+		<div class="comment-body">
+			Pingback: <a href="https://pikirsa.wordpress.com/2015/09/21/gelombang-kotak-gelombang-sinus-dan-harmonisa/" rel="external nofollow" class="url">Gelombang kotak, gelombang sinus dan harmonisa | Pikir dan Rasa</a> 		</div>
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-928" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-928" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/af8ca76d68ab95fc5ce180d93af8a72a" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-af8ca76d68ab95fc5ce180d93af8a72a-0"></span>					<cite class="fn">Ayokunle</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Great explanation, thanks!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=928#respond" onclick="return addComment.moveForm( &quot;div-comment-928&quot;, &quot;928&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Ayokunle">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-928">
+					<time datetime="2015-11-17T14:06:05+00:00">
+						<span class="post-date">November 17, 2015 at 2:06 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-938" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-938" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/bc2ad8514d579e700ee55a8437262088" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-bc2ad8514d579e700ee55a8437262088-0"></span>					<cite class="fn"><a href="http://twitter.com/Exilmar" rel="external nofollow" class="url">ireneofunes (@Exilmar)</a></cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thank you for this! I ‘ve been trying to do some EEG signal processing and this made a lot of things more clear!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=938#respond" onclick="return addComment.moveForm( &quot;div-comment-938&quot;, &quot;938&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to ireneofunes (@Exilmar)">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-938">
+					<time datetime="2015-11-25T23:27:23+00:00">
+						<span class="post-date">November 25, 2015 at 11:27 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-939" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-939" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/919b40384a15a8f1d04e62f82d65cdc4_normal.jpeg" class="avatar avatar-80" height="80" width="80"></span>					<cite class="fn"><a href="http://twitter.com/Exilmar" rel="external nofollow" class="url">ireneofunes (@Exilmar)</a></cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thanks for this! I ‘ve been doing some EEG signal processing and this helped a lot!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=939#respond" onclick="return addComment.moveForm( &quot;div-comment-939&quot;, &quot;939&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to ireneofunes (@Exilmar)">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-939">
+					<time datetime="2015-11-25T23:29:30+00:00">
+						<span class="post-date">November 25, 2015 at 11:29 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-943" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-943" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/8051923d00e3b6ca928cc30db822b009" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-8051923d00e3b6ca928cc30db822b009-0"></span>					<cite class="fn">Mariana</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thank you so much for this post! I’ve understood things that I have been trying to for a long time!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=943#respond" onclick="return addComment.moveForm( &quot;div-comment-943&quot;, &quot;943&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Mariana">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-943">
+					<time datetime="2015-11-26T16:22:28+00:00">
+						<span class="post-date">November 26, 2015 at 4:22 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-947" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-947" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/12d1475721c3b8e0720a8232557de706" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-12d1475721c3b8e0720a8232557de706-1"></span>					<cite class="fn">stephen</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Yes he did a wonderful job explaining this concept!  Even more intuitive Engineering perspective of a wavelet is the set points or characteristics of a vehicle suspension.  Each signal change in time domain is a mass damper response in a window.  Drive around a 2D signal and you get a lower dimensional spacio temporal view of the signal just by instrumenting the suspension.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=947#respond" onclick="return addComment.moveForm( &quot;div-comment-947&quot;, &quot;947&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to stephen">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-947">
+					<time datetime="2015-11-28T16:11:27+00:00">
+						<span class="post-date">November 28, 2015 at 4:11 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-976" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-976" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/12d1475721c3b8e0720a8232557de706" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-12d1475721c3b8e0720a8232557de706-2"></span>					<cite class="fn">stephen</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>The problem I have with wavelets and maybe you can comment on this more in your explanation.  For 2D images the “signal” for 2 slightly different perspectives of the same scene generates wavelet coefficients that are radically different.  There isn’t any local features overlap because images don’t really have boundaries like eg written text.  I guess if you do a global wavelet with different size and orientation and use a classifier some machine learning similarity works.  Don’t think this is the smartest solution for image recognition where the signal for the same image can vary.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=976#respond" onclick="return addComment.moveForm( &quot;div-comment-976&quot;, &quot;976&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to stephen">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-976">
+					<time datetime="2015-12-19T07:25:05+00:00">
+						<span class="post-date">December 19, 2015 at 7:25 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1108" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-1108" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/081ee82b0413a470f2ba5129735fe142" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-081ee82b0413a470f2ba5129735fe142-0"></span>					<cite class="fn">Amelie</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Awesome!!! This helped me a lot!! Thanks <img draggable="false" class="emoji" alt="🙂" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/1f642.svg"></p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1108#respond" onclick="return addComment.moveForm( &quot;div-comment-1108&quot;, &quot;1108&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Amelie">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1108">
+					<time datetime="2016-05-11T09:36:48+00:00">
+						<span class="post-date">May 11, 2016 at 9:36 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1135" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-1135" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/39e05b176a071896a61c8d8e76a6f93c" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-39e05b176a071896a61c8d8e76a6f93c-0"></span>					<cite class="fn">Jyotsna</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Well explained… Thanks!!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1135#respond" onclick="return addComment.moveForm( &quot;div-comment-1135&quot;, &quot;1135&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Jyotsna">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1135">
+					<time datetime="2016-06-21T10:53:35+00:00">
+						<span class="post-date">June 21, 2016 at 10:53 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1184" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-1184" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/54820b54da876941d7ba005aec785983" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-54820b54da876941d7ba005aec785983-0"></span>					<cite class="fn">Max</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>great article</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1184#respond" onclick="return addComment.moveForm( &quot;div-comment-1184&quot;, &quot;1184&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Max">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1184">
+					<time datetime="2016-08-15T23:14:16+00:00">
+						<span class="post-date">August 15, 2016 at 11:14 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1193" class="comment even thread-even depth-1 parent highlander-comment">
+		<article id="div-comment-1193" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/da60f68135cf481e2ed6dcab4e567267" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-da60f68135cf481e2ed6dcab4e567267-0"></span>					<cite class="fn"><a href="http://sdfwefg/" rel="external nofollow" class="url">wefwef</a></cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thank you so much for this post, but I have a question regarding this image</p>
+<p><a href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wavelets6.jpg" rel="nofollow">https://georgemdallas.files.wordpress.com/2014/05/wavelets6.jpg?w=646&amp;h=317</a></p>
+<p>in this image, the Fourier version of the signal, the y axis is labelled module? what does module mean?</p>
+<p>a sin function has two properties other that frequency, you have the amplitude as well as the phase offset. </p>
+<p>so the y axis here should be a complex number?</p>
+<p>so what does it mean by module == 1500 in that graph?</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1193#respond" onclick="return addComment.moveForm( &quot;div-comment-1193&quot;, &quot;1193&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to wefwef">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1193">
+					<time datetime="2016-08-29T19:25:31+00:00">
+						<span class="post-date">August 29, 2016 at 7:25 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	<ul class="children">
+
+	<li id="comment-1203" class="comment odd alt depth-2 highlander-comment">
+		<article id="div-comment-1203" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/37b1f854486a6e7885db210ceea53df8" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-37b1f854486a6e7885db210ceea53df8-0"></span>					<cite class="fn">Eu_</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Hi,<br>
+I have the same question. Could you explain what does module mean here, please? It’s the same as amplitude?</p>
+<p>Thanks for the post and the blog as a whole. It’s very very very helpful.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1203#respond" onclick="return addComment.moveForm( &quot;div-comment-1203&quot;, &quot;1203&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Eu_">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1203">
+					<time datetime="2016-09-05T00:22:37+00:00">
+						<span class="post-date">September 5, 2016 at 12:22 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li id="comment-1196" class="comment even thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-1196" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/photo(1).jpg" class="avatar avatar-80" height="80" width="80"></span>					<cite class="fn"><a href="https://plus.google.com/115114839284617782114" rel="external nofollow" class="url">Skyler Nelson</a></cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Math/physics guy here. It’s sort of misleading (or at least controversial) to describe the uncertainty principle as a limit on how much you can know about the velocity and position simultaneously, as though those were both always sharply defined and the problem was about gathering knowledge about them simultaneously. Modern physicists think it’s sort of a poorly named principle, but there are historical reasons for it.<br>
+In the standard quantum formalism, velocity and position are always specified in terms of a distribution over a range of values and if one observable’s distribution is concentrated sharply around a single point, then the uncertainty principle requires that the distribution associated with the other is spread out. Which is to say, particles don’t strictly have definite, sharply defined positions or velocities in the classical sense, and the closer to being well defined one is (i.e. the more concentrated the distribution is around a single value), the less well defined the other is.</p>
+<p>Which is not to say that the metaphor about the uncertainty principle doesn’t carry over to the discussion of the time/frequency domain – I worry that it carries over a little too well. In particular, it’s not clear to me what to make of the concept of a well-defined “instantaneous frequency” for arbitrary signals. If we represent a signal as a function of time F, then it’s periodic if there’s some minimum positive P such that F(x + P) = F(x) for all times x. Frequency can then be defined reciprocally in terms of the period. Sine waves are periodic and have perfectly well defined frequencies.</p>
+<p>The Fourier transform decomposes a signal into a kind of distribution over sine waves, each of which has a perfectly well defined frequency, but it doesn’t do anything like identify a single frequency as “the frequency” of that signal (unless that signal happens to be a sine wave), much less the frequency of the signal at some instant.</p>
+<p>There’s a sense in which one can define the “instantaneous frequency” of a function like sin(x^2) in a fairly natural way, because you can think of it as sampling from a particular periodic function with a well defined frequency at every point in its domain. But that’s a kind of quirk of that particular definition, and has little to do with the windowed Fourier analysis pictured nearby. In general, signals aren’t going to be defined such that there’s a unique periodic function associated with each point in a way that maps on to a natural notion of “instantaneous frequency”.<br>
+In the Fourier representation, the graph isn’t fuzzy because the Fourier analysis is having trouble identifying some instantaneous frequency – it’s showing you a distribution over a set of frequencies that corresponds to a window of time where a natural notion of instantaneous frequency isn’t strictly defined.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1196#respond" onclick="return addComment.moveForm( &quot;div-comment-1196&quot;, &quot;1196&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Skyler Nelson">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1196">
+					<time datetime="2016-08-30T21:43:16+00:00">
+						<span class="post-date">August 30, 2016 at 9:43 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1274" class="comment odd alt thread-even depth-1 highlander-comment">
+		<article id="div-comment-1274" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/photo(2).jpg" class="avatar avatar-80" height="80" width="80"></span>					<cite class="fn"><a href="https://plus.google.com/101672661784101889258" rel="external nofollow" class="url">JoonYoung Park</a></cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Awesome!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1274#respond" onclick="return addComment.moveForm( &quot;div-comment-1274&quot;, &quot;1274&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to JoonYoung Park">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1274">
+					<time datetime="2017-01-06T05:47:43+00:00">
+						<span class="post-date">January 6, 2017 at 5:47 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1345" class="comment even thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-1345" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/dd22cd02258a0d992404ceee89f6534d" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-dd22cd02258a0d992404ceee89f6534d-0"></span>					<cite class="fn">James Raymond</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Excellent. Needs updating now that Yves Meyer won the Abel prize in mathematics for his work on wavelets. They say wavelets were helpful in detecting gravity waves. Can you explain that? The wavelet graph has time on x-axis but you say the x-axis is scale. Why do engineers want to know frequency at a specific time? Can you give an example of how this can improve signal processing? There is a typo “are have”.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1345#respond" onclick="return addComment.moveForm( &quot;div-comment-1345&quot;, &quot;1345&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to James Raymond">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1345">
+					<time datetime="2017-03-22T15:50:18+00:00">
+						<span class="post-date">March 22, 2017 at 3:50 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1414" class="comment byuser comment-author-drkailashshaw odd alt thread-even depth-1 highlander-comment">
+		<article id="div-comment-1414" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/4c710408336a1e6684bfa8c5bdbab9fe" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-4c710408336a1e6684bfa8c5bdbab9fe-0"></span>					<cite class="fn">drkailashshaw</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>recently we are doing some research on wavelet transform and your blog helps us to gain basic information. I would suggest you to write blog or extend this blog with proper explanation of one or two type of wavelet transform such as Ridgelets, Symlets, Shapelets, Curvelets, or Flexible Analytic. Also try to keep derivation  simple and straight and also give some task with solution. </p>
+<p>Please mail me once if you are updating your blog( <a href="mailto:Kailash.shaw@gmail.com">Kailash.shaw@gmail.com</a>)</p>
+<p>Thank You</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1414#respond" onclick="return addComment.moveForm( &quot;div-comment-1414&quot;, &quot;1414&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to drkailashshaw">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1414">
+					<time datetime="2017-05-28T15:43:40+00:00">
+						<span class="post-date">May 28, 2017 at 3:43 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1586" class="comment even thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-1586" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/c7f363a089f50e14332454e8107c7a62" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-c7f363a089f50e14332454e8107c7a62-0"></span>					<cite class="fn">Bilal Asad</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Great article…..Thank you so much for sharing</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1586#respond" onclick="return addComment.moveForm( &quot;div-comment-1586&quot;, &quot;1586&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Bilal Asad">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1586">
+					<time datetime="2017-09-20T12:36:20+00:00">
+						<span class="post-date">September 20, 2017 at 12:36 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1621" class="comment odd alt thread-even depth-1 highlander-comment">
+		<article id="div-comment-1621" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/220d992de59bf2d5103b2e72cf45d8d3" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-220d992de59bf2d5103b2e72cf45d8d3-0"></span>					<cite class="fn">vivoun</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Simple and neat explanation!!!!!!!!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1621#respond" onclick="return addComment.moveForm( &quot;div-comment-1621&quot;, &quot;1621&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to vivoun">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1621">
+					<time datetime="2017-10-25T10:19:31+00:00">
+						<span class="post-date">October 25, 2017 at 10:19 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1626" class="comment even thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-1626" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/12d1475721c3b8e0720a8232557de706" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-12d1475721c3b8e0720a8232557de706-3"></span>					<cite class="fn">Stephen</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>I unwrapped the concept of wavelets into a nonlinear classifier with many uses including preprocessor.  Do you have a book, class or recommend one that reduces the impediment of the math?</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1626#respond" onclick="return addComment.moveForm( &quot;div-comment-1626&quot;, &quot;1626&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Stephen">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1626">
+					<time datetime="2017-10-28T14:47:30+00:00">
+						<span class="post-date">October 28, 2017 at 2:47 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1746" class="comment odd alt thread-even depth-1 highlander-comment">
+		<article id="div-comment-1746" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/8f4fbb26f17ea8e6cc57919db726d010" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-8f4fbb26f17ea8e6cc57919db726d010-0"></span>					<cite class="fn">Lou Bartek</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Tank you for writing this.  I have been reading many articles about the Fourier Transform and Wavelet Transforms and none of them pulled the concepts together as clearly and successfully as you have here.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1746#respond" onclick="return addComment.moveForm( &quot;div-comment-1746&quot;, &quot;1746&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Lou Bartek">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1746">
+					<time datetime="2018-02-26T01:26:23+00:00">
+						<span class="post-date">February 26, 2018 at 1:26 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1777" class="comment even thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-1777" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/c46e1fea48dcca4c44bc1a0b95dc6908" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-c46e1fea48dcca4c44bc1a0b95dc6908-0"></span>					<cite class="fn">Arun</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Very clear explanation in simple language, thank you very much for this post.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/?replytocom=1777#respond" onclick="return addComment.moveForm( &quot;div-comment-1777&quot;, &quot;1777&quot;, &quot;respond&quot;, &quot;448&quot; )" aria-label="Reply to Arun">Reply</a></div>				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-1777">
+					<time datetime="2018-04-04T20:12:48+00:00">
+						<span class="post-date">April 4, 2018 at 8:12 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+		<div id="respond" class="comment-respond js">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://georgemdallas.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="9e60c479a9"><input type="hidden" name="_wp_http_referer" value="/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/">
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; overflow-wrap: break-word; overflow: hidden; transition: none 0s ease 0s; height: 0px !important; min-height: 0px !important; font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none solid rgba(0, 0, 0, 0.7); word-spacing: 0px; text-indent: 0px; line-height: normal; width: 624px;" class="autosizejs "></textarea><textarea id="comment" name="comment" title="Enter your comment here..." placeholder="Enter your comment here..." style="height: 36px; overflow: hidden; overflow-wrap: break-word; resize: none;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-form-guest" id="postas-guest" class="nascar-signin-link" title="Login via Guest">
+									</a>
+			</li>
+			<li>
+				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-form-load-service:WordPress.com" id="postas-wordpress" class="nascar-signin-link" title="Login via WordPress.com">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#0087be" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path></g></svg>				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(14).html" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+			<li>
+				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-form-load-service:Twitter" id="postas-twitter" class="nascar-signin-link" title="Login via Twitter">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#1DA1F2" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"></path></g></svg>				</a>
+			</li>
+			<li>
+				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#comment-form-load-service:Facebook" id="postas-facebook" class="nascar-signin-link" title="Login via Facebook">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#3B5998" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"></path></g></svg>				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/ad516503a11cd5ca435acc9bb6523536" alt="Gravatar" width="25" class="no-grav">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="url" value=""></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/ad516503a11cd5ca435acc9bb6523536" alt="WordPress.com Logo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+						<p class="comment-form-posting-as pa-wordpress">
+			<strong></strong>
+			You are commenting using your <span class="skimlinks-unlinked">WordPress.com</span> account.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;wordpress&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;
+				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#0087be" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/ad516503a11cd5ca435acc9bb6523536" alt="Google+ photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="">
+						<p class="comment-form-posting-as pa-googleplus">
+			<strong></strong>
+			You are commenting using your Google+ account.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;googleplus&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;
+				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" x="0px" y="0px" viewBox="0 0 60 60"><path fill="#519bf7" d="M56.3,30c0,-1.6 -0.2,-3.4 -0.6,-5h-3.1H42.2H30v10.6h14.8C44,39.3 42,42 39.1,43.9l8.8,6.8C53,46 56.3,39 56.3,30z"></path><path fill="#3db366" d="M30,57.5c6.7,0 13.1,-2.4 17.9,-6.8l-8.8,-6.8c-2.5,1.6 -5.6,2.4 -9.1,2.4c-7.2,0 -13.3,-4.7 -15.4,-11.2l-9.3,7.1C9.8,51.3 19.1,57.5 30,57.5z"></path><path fill="#fdc600" d="M5.3,42.2l9.3,-7.1c-0.5,-1.6 -0.8,-3.3 -0.8,-5.1s0.3,-3.5 0.8,-5.1l-9.3,-7.1C3.5,21.5 2.5,25.6 2.5,30S3.5,38.5 5.3,42.2z"></path><path fill="#f15b44" d="M40.1,17.4l8,-8C43.3,5.1 37,2.5 30,2.5C19.1,2.5 9.8,8.7 5.3,17.8l9.3,7.1c2.1,-6.5 8.2,-11.1 15.4,-11.1C33.9,13.7 37.4,15.1 40.1,17.4z"></path></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/ad516503a11cd5ca435acc9bb6523536" alt="Twitter picture" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+						<p class="comment-form-posting-as pa-twitter">
+			<strong></strong>
+			You are commenting using your Twitter account.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;twitter&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;
+				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#1DA1F2" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"></path></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/ad516503a11cd5ca435acc9bb6523536" alt="Facebook photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+						<p class="comment-form-posting-as pa-facebook">
+			<strong></strong>
+			You are commenting using your Facebook account.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;facebook&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;
+				<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#3B5998" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"></path></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Notify me of new posts via email.</label></p></div>
+
+
+
+
+<p class="form-submit" style="display: none;"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="448" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="79429b6877"></p>
+<input type="hidden" name="genseq" value="1538514552">
+<p style="display: none;"></p>			<input type="hidden" id="ak_js" name="ak_js" value="1538514553601"></form>
+			</div><!-- #respond -->
+	<div style="clear: both"></div>
+</div><!-- #comments -->
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	<div id="secondary" class="widget-area" role="complementary">
+				<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://georgemdallas.wordpress.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+	</label>
+	<input type="submit" class="search-submit" value="Search">
+</form>
+</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Recent Posts</h1>		<ul>
+											<li>
+					<a href="https://georgemdallas.wordpress.com/2015/03/24/the-story-of-computer-vision/">The Story of Computer&nbsp;Vision</a>
+									</li>
+											<li>
+					<a href="https://georgemdallas.wordpress.com/2014/12/15/an-engineers-guide-to-cooking/">An Engineer’s Guide to&nbsp;Cooking</a>
+									</li>
+											<li>
+					<a href="https://georgemdallas.wordpress.com/2014/06/05/making-sense-of-internet-platforms-network-effects-and-two-sided-markets/">Making sense of Internet Platforms: Network Effects and Two Sided&nbsp;Markets</a>
+									</li>
+											<li>
+					<a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/">Wavelets 4 Dummies: Signal Processing, Fourier Transforms and&nbsp;Heisenberg</a>
+									</li>
+											<li>
+					<a href="https://georgemdallas.wordpress.com/2014/05/02/what-are-fractals-and-why-should-i-care/">What are Fractals and why should I&nbsp;care?</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent Comments</h1>				<table class="recentcommentsavatar" cellspacing="0" cellpadding="0" border="0">
+					<tbody><tr><td title="Arun" class="recentcommentsavatartop" style="height:48px; width:48px;"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/c46e1fea48dcca4c44bc1a0b95dc6908(1)" class="avatar avatar-48 grav-hashed grav-hijack" height="48" width="48" id="grav-c46e1fea48dcca4c44bc1a0b95dc6908-1"></td><td class="recentcommentstexttop" style="">Arun on <a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/comment-page-1/#comment-1777">Wavelets 4 Dummies: Signal Pro…</a></td></tr><tr><td title="Scientific Prose in EEBO-TCP – Linguistic DNA" class="recentcommentsavatarend" style="height:48px; width:48px;"><a href="https://www.linguisticdna.org/2018/03/21/scientific-prose-in-eebo-tcp/" rel="nofollow"></a></td><td class="recentcommentstextend" style=""><a href="https://www.linguisticdna.org/2018/03/21/scientific-prose-in-eebo-tcp/" rel="nofollow">Scientific Prose in…</a> on <a href="https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/comment-page-7/#comment-1764">Principal Component Analysis 4…</a></td></tr><tr><td title="JSZ" class="recentcommentsavatarend" style="height:48px; width:48px;"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/a097a4f81d39980b03c102b2e8619ac5" class="avatar avatar-48 grav-hashed grav-hijack" height="48" width="48" id="grav-a097a4f81d39980b03c102b2e8619ac5-0"></td><td class="recentcommentstextend" style="">JSZ on <a href="https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/comment-page-7/#comment-1759">Principal Component Analysis 4…</a></td></tr><tr><td title="PCA and yield curve? what the fuck is that? – siyuano" class="recentcommentsavatarend" style="height:48px; width:48px;"><a href="http://siyuano.com/2018/03/10/pca-and-yield-curve-what-the-fuck-is-that/" rel="nofollow"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/cropped-il_fullxfull-516922303_hxu01.jpg" class="avatar avatar-48" height="48" width="48"></a></td><td class="recentcommentstextend" style=""><a href="http://siyuano.com/2018/03/10/pca-and-yield-curve-what-the-fuck-is-that/" rel="nofollow">PCA and yield curve?…</a> on <a href="https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/comment-page-7/#comment-1757">Principal Component Analysis 4…</a></td></tr><tr><td title="Matthew Ross Harrison" class="recentcommentsavatarend" style="height:48px; width:48px;"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/7f99be2e7440bdc8e3f61cdb4706a070" class="avatar avatar-48 grav-hashed grav-hijack" height="48" width="48" id="grav-7f99be2e7440bdc8e3f61cdb4706a070-0"></td><td class="recentcommentstextend" style="">Matthew Ross Harriso… on <a href="https://georgemdallas.wordpress.com/2014/05/02/what-are-fractals-and-why-should-i-care/comment-page-1/#comment-1756">What are Fractals and why shou…</a></td></tr>				</tbody></table>
+				</aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1>		<ul>
+				<li><a href="https://georgemdallas.wordpress.com/2015/03/">March 2015</a></li>
+	<li><a href="https://georgemdallas.wordpress.com/2014/12/">December 2014</a></li>
+	<li><a href="https://georgemdallas.wordpress.com/2014/06/">June 2014</a></li>
+	<li><a href="https://georgemdallas.wordpress.com/2014/05/">May 2014</a></li>
+	<li><a href="https://georgemdallas.wordpress.com/2014/02/">February 2014</a></li>
+	<li><a href="https://georgemdallas.wordpress.com/2013/10/">October 2013</a></li>
+	<li><a href="https://georgemdallas.wordpress.com/2013/08/">August 2013</a></li>
+	<li><a href="https://georgemdallas.wordpress.com/2013/07/">July 2013</a></li>
+	<li><a href="https://georgemdallas.wordpress.com/2013/06/">June 2013</a></li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1>		<ul>
+				<li class="cat-item cat-item-1"><a href="https://georgemdallas.wordpress.com/category/uncategorized/">Uncategorized</a>
+</li>
+		</ul>
+			</aside><aside id="meta-2" class="widget widget_meta"><h1 class="widget-title">Meta</h1>			<ul>
+			<li><a href="https://wordpress.com/start?ref=wplogin">Register</a></li>			<li><a href="https://georgemdallas.wordpress.com/wp-login.php">Log in</a></li>
+			<li><a href="https://georgemdallas.wordpress.com/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://georgemdallas.wordpress.com/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.com/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.com</a></li>			</ul>
+			</aside>		<div class="wpcnt">
+			<div class="wpa wpwidesky">
+				<span class="wpa-about">Advertisements</span>
+				<div class="u">
+							<div style="padding-bottom:15px;width:160px;height:600px;">
+		<div id="atatags-286348-5bb3de78d5148" style="width: auto; height: auto;"><div style="width: 160px; height: 600px;"><iframe frameborder="0" scrolling="no" width="160" height="600" style="border:none;overflow:hidden;width:160px;height:600px;" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(15).html"></iframe></div><div id="atatags-286348-5bb3de78d5148__controls" style="width:160px;height:10px;text-align:right;line-height:6px;"><span id="atatags-286348-5bb3de78d5148__complain-btn" style="font-size: 10px; color: rgb(109, 171, 210); text-decoration: underline; cursor: pointer; display: inline;">Report this ad</span></div></div></div>
+				</div>
+				
+			</div>
+		</div>	</div><!-- #secondary -->
+
+	</div><!-- #content -->
+		<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+						<a href="https://wordpress.com/?ref=footer_website">Create a free website or blog at WordPress.com.</a>
+			
+					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!--  -->
+<script type="text/javascript" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/gprofiles.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wpgroho.js.download"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-b41d16438d8feab7d1169b10cf88483d">
+	</div>
+	<div class="grofile-hash-map-e5ee7ab1b1c2c194f6f7d4bf1a4c4770">
+	</div>
+	<div class="grofile-hash-map-cd12213a7646970c04a104ab6a5298ef">
+	</div>
+	<div class="grofile-hash-map-06e038d2c5ece45750287266cfb4abf2">
+	</div>
+	<div class="grofile-hash-map-ed33cfc725b9b007cc59ce50d2ced331">
+	</div>
+	<div class="grofile-hash-map-1d222a5ec6ae56bf33571a6a27a406a7">
+	</div>
+	<div class="grofile-hash-map-d18ddefd8101e126179c0f046c6d6d47">
+	</div>
+	<div class="grofile-hash-map-a8bfb7af66c156955221fce047189996">
+	</div>
+	<div class="grofile-hash-map-066035c1f484f52bb545ef8eb70e397e">
+	</div>
+	<div class="grofile-hash-map-7b296068c8191062cb0d9153bec949f2">
+	</div>
+	<div class="grofile-hash-map-fca6efa639d047312efde86074214c0a">
+	</div>
+	<div class="grofile-hash-map-12d1475721c3b8e0720a8232557de706">
+	</div>
+	<div class="grofile-hash-map-2320da4a0ac6b0739be7d9f1bc73f562">
+	</div>
+	<div class="grofile-hash-map-a463587086e8849402f6b12ff11e2147">
+	</div>
+	<div class="grofile-hash-map-5a6bc0239e17b9c9357e59b79e21029e">
+	</div>
+	<div class="grofile-hash-map-a83cc93c05da5bb280f858238fe7c72d">
+	</div>
+	<div class="grofile-hash-map-af8ca76d68ab95fc5ce180d93af8a72a">
+	</div>
+	<div class="grofile-hash-map-bc2ad8514d579e700ee55a8437262088">
+	</div>
+	<div class="grofile-hash-map-8051923d00e3b6ca928cc30db822b009">
+	</div>
+	<div class="grofile-hash-map-081ee82b0413a470f2ba5129735fe142">
+	</div>
+	<div class="grofile-hash-map-39e05b176a071896a61c8d8e76a6f93c">
+	</div>
+	<div class="grofile-hash-map-54820b54da876941d7ba005aec785983">
+	</div>
+	<div class="grofile-hash-map-da60f68135cf481e2ed6dcab4e567267">
+	</div>
+	<div class="grofile-hash-map-37b1f854486a6e7885db210ceea53df8">
+	</div>
+	<div class="grofile-hash-map-c6bcd2b91d1a4ddf61f25d3347b82f08">
+	</div>
+	<div class="grofile-hash-map-6dab4c7b58d60a4ecfd64eaec2ddb3d4">
+	</div>
+	<div class="grofile-hash-map-dd22cd02258a0d992404ceee89f6534d">
+	</div>
+	<div class="grofile-hash-map-4c710408336a1e6684bfa8c5bdbab9fe">
+	</div>
+	<div class="grofile-hash-map-c7f363a089f50e14332454e8107c7a62">
+	</div>
+	<div class="grofile-hash-map-220d992de59bf2d5103b2e72cf45d8d3">
+	</div>
+	<div class="grofile-hash-map-8f4fbb26f17ea8e6cc57919db726d010">
+	</div>
+	<div class="grofile-hash-map-c46e1fea48dcca4c44bc1a0b95dc6908">
+	</div>
+	<div class="grofile-hash-map-a097a4f81d39980b03c102b2e8619ac5">
+	</div>
+	<div class="grofile-hash-map-7f99be2e7440bdc8e3f61cdb4706a070">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/georgemdallas.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/georgemdallas.wordpress.com\/wp-login.php?action=logout&_wpnonce=f8bfbbd660","homeURL":"https:\/\/georgemdallas.wordpress.com\/","postID":"448","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(8)"></script>
+
+	<div id="carousel-reblog-box">
+		<form action="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/#" class="cancel">Cancel</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post">
+				<input type="hidden" id="carousel-reblog-blog-id" value="53325627">
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://georgemdallas.wordpress.com">
+				<input type="hidden" id="carousel-reblog-blog-title" value="George Dallas">
+				<input type="hidden" id="carousel-reblog-post-url" value="">
+				<input type="hidden" id="carousel-reblog-post-title" value="">
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="3e503c3021"><input type="hidden" name="_wp_http_referer" value="/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/">		</form>
+
+		<div class="arrow"></div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/georgemdallas.wordpress.com\/2014\/05\/14\/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg\/":448};
+	</script>
+				<link rel="stylesheet" id="all-css-0-3" href="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/jetpack-carousel.css" type="text/css" media="all">
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825h&#038;ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"53325627","siteName":"George Dallas","siteURL":"http:\/\/georgemdallas.wordpress.com","icon":"<img alt='' src='https:\/\/s2.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/sorbet","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/georgemdallas.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fgeorgemdallas.wordpress.com%2F2014%2F05%2F14%2Fwavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg%2F","themeURL":"","xhrURL":"https:\/\/georgemdallas.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"1b3dc01c16","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"6422997532\" \/>","referer":"https:\/\/georgemdallas.wordpress.com\/2014\/05\/14\/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg\/","canFollow":"1","feedID":"11517276","statusMessage":"","customizeLink":"https:\/\/georgemdallas.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fgeorgemdallas.wordpress.com%2F2014%2F05%2F14%2Fwavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg%2F","postID":"448","shortlink":"https:\/\/wp.me\/p3BKqL-7e","canEditPost":"","editLink":"https:\/\/wordpress.com\/post\/georgemdallas.wordpress.com\/448","statsLink":"https:\/\/wordpress.com\/stats\/post\/448\/georgemdallas.wordpress.com","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Sorbet","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"Join 197 other followers","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/georgemdallas.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fgeorgemdallas.wordpress.com%2F2014%2F05%2F14%2Fwavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg%2F\">Log in now.<\/a>","stats":"Stats"}};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/georgemdallas.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"26ba6071c8","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/georgemdallas.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fgeorgemdallas.wordpress.com%2F2014%2F05%2F14%2Fwavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg%2F","blog_id":"53325627","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=53325627&v=wpcom&tz=0&user_id=0&subd=georgemdallas","is_public":"1","reblog_enabled":""};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(9)"></script><div class="widget widget_eu_cookie_law_widget" style="display: block;"><div class="hide-on-button ads-active" data-hide-timeout="30" data-consent-expiration="180" id="eu-cookie-law">
+	<form method="post">
+		<input type="submit" value="Close and accept" class="accept">
+
+		Privacy &amp; Cookies: This site uses cookies. By continuing to use this website, you agree to their use. <br>
+To find out more, including how to control cookies, see here:
+		<a href="https://automattic.com/cookies">
+			Cookie Policy		</a>
+ </form>
+</div>
+</div><div id="actionbar" class="actnbr-pub-sorbet actnbr-has-follow"><ul><li class="actnbr-btn actnbr-hidden"> 			    	<a class="actnbr-action actnbr-actn-follow" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/"><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a> 			    	<div class="actnbr-popover tip tip-top-left actnbr-notice"> 			    		<div class="tip-arrow"></div> 			    		<div class="tip-inner actnbr-follow-bubble"></div> 			    	</div> 			    </li><li class="actnbr-ellipsis actnbr-hidden"> 			  <svg class="gridicon gridicon__ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><circle cx="5" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle></g></svg> 			  <div class="actnbr-popover tip tip-top-left actnbr-more"> 			  	<div class="tip-arrow"></div> 			  	<div class="tip-inner"> 				  <ul> 				    <li class="actnbr-sitename"><a href="http://georgemdallas.wordpress.com/"><img alt="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/wpcom-gray-white.png" class="avatar avatar-50" height="50" width="50"> George Dallas</a></li> 				   	<li class="actnbr-folded-customize"><a href="https://georgemdallas.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fgeorgemdallas.wordpress.com%2F2014%2F05%2F14%2Fwavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg%2F"><svg class="gridicon gridicon__customize" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z" data-reactid=".2.1.1:0.1b.0"></path></g></svg><span>Customize<span></span></span></a></li> 				    <li class="actnbr-folded-follow"><a class="actnbr-action actnbr-actn-follow" href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/"><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a></li> 					<li class="actnbr-signup"><a href="https://wordpress.com/start/">Sign up</a></li> 				    <li class="actnbr-login"><a href="https://georgemdallas.wordpress.com/wp-login.php?redirect_to=https%3A%2F%2Fgeorgemdallas.wordpress.com%2F2014%2F05%2F14%2Fwavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg%2F">Log in</a></li> 				     				    <li class="actnbr-shortlink"><a href="https://wp.me/p3BKqL-7e">Copy shortlink</a></li> 				    <li class="flb-report"><a href="http://en.wordpress.com/abuse/">Report this content</a></li> 				     				     				    <li class="actnbr-subs"><a href="https://subscribe.wordpress.com/">Manage subscriptions</a></li> 				    <li class="actnbr-fold"><a href="https://georgemdallas.wordpress.com/2014/05/14/wavelets-4-dummies-signal-processing-fourier-transforms-and-heisenberg/">Collapse this bar</a></li> 			      </ul> 			    </div> 		      </div> 		    </li> 	      </ul></div>
+<script type="text/javascript">
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "georgemdallas.wordpress.com";
+	</script>
+	<script type="text/javascript" defer="" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/725X1342.skimlinks.js.download"></script>		<iframe src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/master.html" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/w.js.download" type="text/javascript" async="" defer=""></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'53325627','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'53325627','v':'wpcom','tz':'0','user_id':'0','post':'448','subd':'georgemdallas'}]);
+_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdTdvUG14Q2VDQTR4LlUsLi82dU1mai9BMkM9QjRQOXBLb118PUhJbHJUKzVTX0lCY0ZyS2M4cGlJUXppTGJkNjdSMj0mY2lfVS1NTjVVVV8tLVExKzhqcjlBazV2aUI2eXpTckhxWV1vNlRxRDIlRjU/a2hVLnNnMnZwSVN+UThRUU84ZENMSEZKa1h6P2kucWFWZT9rc3dwLXgmel8wMVtUUTdvZ351RkM4YjZfUUI1czkuJks9b3Rrb1Z2ZkgscTd+MG5SMGRkPW5BcHdLdkxaeTRJMWI/QTRaLmF8ZTFfRkloJlVTK2olLERMVHN4aVdLSlgwZ0pqLDZIaFlmcjU0eHk4OTU2TXZqS3FGPVE4Rw=='}]);
+_stq.push([ 'clickTrackerInit', '53325627', '448' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+<img src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/g.gif" alt=":)" id="wpstats"></body><div><div class="gr_-editor gr-iframe-first-load" style="display: none;"><div class="gr_-editor_back"></div><iframe class="gr_-ifr gr-_dialog-content" src="./Wavelets 4 Dummies_ Signal Processing, Fourier Transforms and Heisenberg – George Dallas_files/saved_resource(16).html"></iframe></div></div><grammarly-card><div></div></grammarly-card><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
